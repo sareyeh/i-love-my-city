@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title><%=title%></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" />
+    <script src="https://use.edgefonts.net/lobster-two.js"></script>
+    <style>
+       p.headingFont{
+          font-family: lobster-two, cursive;
+          font-size: 40px;
+     }
+    </style>
+  </head>
+    <body>
+
+        <%- include('partials/menu.ejs') %>
+
+         
+<br/><br/><br/>
+
+  <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+                  <p class="headingFont" align="center">
+                     <%=headline%>
+                  </p>
+          </div>
+        </div>
+  </div>
+<br/>
+  <div class="container">
+          <div class="row">
+              <% for(var i=1;i<=numberOfImages;i++) {%>
+              <div class="col-md-6">
+                 <div class="thumbnail">
+                 <img src="/images/<%=city%>/<%=city%>-<%=i%>.jpg"/>
+                 </div>
+              </div>
+              <%}%>
+          </div>
+  </div>
+
+
+
+<script src="/js/jquery-1.11.3.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
